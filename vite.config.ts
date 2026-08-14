@@ -17,6 +17,9 @@ function figmaAssetResolver() {
 }
 
 export default defineConfig({
+    // Relative base so the build works both at the domain root (custom domain)
+  // and under a subpath like github.io/awaraclay
+  base: './',
   plugins: [
     figmaAssetResolver(),
     // The React and Tailwind plugins are both required for Make, even if
