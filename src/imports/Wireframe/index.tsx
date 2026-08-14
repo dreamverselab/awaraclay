@@ -100,7 +100,7 @@ function Menu() {
           </svg>
         </div>
       </div>
-      <div className="relative shrink-0 size-[20px]" data-name="Component 3">
+      <a href="https://www.instagram.com/awara_clay/" target="_blank" rel="noopener noreferrer" className="relative shrink-0 size-[20px]" data-name="Component 3">
         <div className="absolute inset-0 overflow-clip" data-name="Component 2">
           <div className="absolute left-[1.67px] size-[16.667px] top-[1.67px]" data-name="Vector">
             <svg className="absolute block inset-0 size-full" fill="none" height="16.6667" preserveAspectRatio="none" viewBox="0 0 16.6667 16.6667" width="16.6667">
@@ -108,7 +108,7 @@ function Menu() {
             </svg>
           </div>
         </div>
-      </div>
+      </a>
       <div className="relative shrink-0 size-[20px]" data-name="Component 6">
         <div className="absolute inset-0 overflow-clip" data-name="Component 2">
           <div className="absolute inset-[5.88%_11.76%_5.87%_12.13%]" data-name="Vector">
@@ -2902,7 +2902,7 @@ function Container8() {
     <div className="content-stretch flex gap-[4px] h-[24px] items-center relative shrink-0 w-full" data-name="Container">
       <RiMailLine />
       <div className="[word-break:break-word] flex flex-[1_0_0] flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] min-w-px relative text-[#715d8a] text-[14px] tracking-[-0.14px]" style={{ fontVariationSettings: '"opsz" 14' }}>
-        <p className="leading-[1.6]">hello@awaranalini.art</p>
+        <p className="leading-[1.6]">awaraclay@gmail.com</p>
       </div>
     </div>
   );
@@ -2926,7 +2926,7 @@ function Container9() {
     <div className="content-stretch flex gap-[4px] h-[24px] items-center relative shrink-0 w-full" data-name="Container">
       <RiPhoneLine />
       <div className="[word-break:break-word] flex flex-[1_0_0] flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] min-w-px relative text-[#715d8a] text-[14px] tracking-[-0.14px]" style={{ fontVariationSettings: '"opsz" 14' }}>
-        <p className="leading-[1.6]">+91 80-4830-3921</p>
+        <p className="leading-[1.6]">+91 81-9306-6618</p>
       </div>
     </div>
   );
@@ -3573,7 +3573,7 @@ function Contact() {
     <div className="content-stretch flex gap-[4px] h-[24px] items-center relative shrink-0 w-[280px]" data-name="Contact">
       <RiMailLine1 />
       <div className="[word-break:break-word] flex flex-[1_0_0] flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] min-w-px relative text-[#c3b9d0] text-[14px] tracking-[-0.14px]" style={{ fontVariationSettings: '"opsz" 14' }}>
-        <p className="leading-[1.6]">hello@awaranalini.art</p>
+        <p className="leading-[1.6]">awaraclay@gmail.com</p>
       </div>
     </div>
   );
@@ -3597,7 +3597,7 @@ function Contact1() {
     <div className="content-stretch flex gap-[4px] h-[24px] items-center relative shrink-0 w-[280px]" data-name="Contact">
       <RiPhoneLine1 />
       <div className="[word-break:break-word] flex flex-[1_0_0] flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] min-w-px relative text-[#c3b9d0] text-[14px] tracking-[-0.14px]" style={{ fontVariationSettings: '"opsz" 14' }}>
-        <p className="leading-[1.6]">+91 80-4830-3921</p>
+        <p className="leading-[1.6]">+91 81-9306-6618</p>
       </div>
     </div>
   );
@@ -3668,7 +3668,9 @@ function RiLinkedinFill() {
 function SocialMedia() {
   return (
     <div className="content-stretch flex gap-[24px] h-[24px] items-center relative shrink-0" data-name="Social Media">
-      <InstagramLine />
+      <a href="https://www.instagram.com/awara_clay/" target="_blank" rel="noopener noreferrer">
+        <InstagramLine />
+      </a>
       <ThreadsLine />
       <RiYoutubeLine />
       <RiFacebookFill />
