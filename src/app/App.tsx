@@ -98,7 +98,7 @@ export default function App() {
       }}
     >
       {/* Outer wrapper: occupies scaled document size in layout */}
-      <div style={{ width: scaledWidth, height: scaledHeight, overflow: "hidden" }}>
+      <div style={{ width: scaledWidth, height: scaledHeight, overflow: "hidden", marginLeft: "auto", marginRight: "auto" }}>
         {/* Inner div: full design size, scaled down via transform */}
         <div
           style={{
