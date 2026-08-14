@@ -7,7 +7,7 @@ const DESIGN_HEIGHT = 9112;
 
 function getScale() {
   return typeof window !== "undefined"
-    ? Math.min(window.innerWidth / DESIGN_WIDTH, 1)
+    ? window.innerWidth / DESIGN_WIDTH
     : 1;
 }
 
