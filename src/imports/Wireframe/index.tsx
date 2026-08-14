@@ -3255,7 +3255,7 @@ function Container6() {
 
 function InquirySection() {
   return (
-    <div className="-translate-x-1/2 absolute bg-[#f2f0f5] content-stretch flex flex-col items-center justify-center left-1/2 py-[80px] top-[7880px] w-[1440px]" data-name="Inquiry Section">
+    <div className="-translate-x-1/2 absolute bg-[#f2f0f5] content-stretch flex flex-col items-center justify-center left-1/2 py-[80px] top-[7880px] h-[520px] w-[1440px]" data-name="Inquiry Section">
       <Container6 />
     </div>
   );
