@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { toast } from "sonner";
+import { supabase } from "../../lib/supabaseClient";
 import svgPaths from "./svg-vbbf5e73n9";
 import imgFrame248 from "./9694db3d69e9bb96523ca38609c5f0f7d7a6bf3b.png";
 import imgGraphics from "./27228330f653ddb6ee2d631b8706b65b6a248754.png";
@@ -3125,9 +3126,24 @@ function Frame15() {
   const set = (key: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setFields((f) => ({ ...f, [key]: e.target.value }));
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent! We’ll be in touch soon.");
+    setSubmitting(true);
+    const { error } = await supabase.from("awaraconnect").insert({
+      name: fields.name,
+      email: fields.email,
+      inquiry: fields.inquiry,
+      message: fields.message,
+    });
+    setSubmitting(false);
+    if (error) {
+      console.error(error);
+      toast.error("Something went wrong. Please try again.");
+      return;
+    }
+    toast.success("Message sent! We'll be in touch soon.");
     setFields({ name: "", email: "", inquiry: "Custom Commission", message: "" });
   };
 
@@ -3214,11 +3230,12 @@ function Frame15() {
         <div aria-hidden className="absolute border-2 border-[#342b40] border-solid inset-0 pointer-events-none rounded-[100px]" />
         <button
           type="submit"
-          className="flex flex-row items-center justify-center size-full bg-transparent cursor-pointer"
+          disabled={submitting}
+          className="flex flex-row items-center justify-center size-full bg-transparent cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <div className="content-stretch flex items-center justify-center px-[16px] py-[8px] relative size-full">
             <span className="font-['DM_Sans:Regular',sans-serif] font-normal text-[#342b40] text-[16px] tracking-[-0.32px] whitespace-nowrap" style={{ fontVariationSettings: '"opsz" 14' }}>
-              Send Message
+              {submitting ? "Sending..." : "Send Message"}
             </span>
           </div>
         </button>
